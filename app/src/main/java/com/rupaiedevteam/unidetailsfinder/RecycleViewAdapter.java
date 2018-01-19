@@ -23,6 +23,8 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerVHforRows> 
     public RecyclerVHforRows onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.uni_details_row,null);
+
+
         RecyclerVHforRows recyclerVHforRows = new RecyclerVHforRows(view);
 
         return recyclerVHforRows;
@@ -30,8 +32,8 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerVHforRows> 
 
     @Override
     public void onBindViewHolder(RecyclerVHforRows holder, int position) {
-        holder.uniName.setText(unilist.get(position).getUniversity().get(0).getName());
-        holder.uniAddress.setText(unilist.get(position).getUniversity().get(0).getAddress());
+        holder.uniName.setText(unilist.get(position).getName());
+        holder.uniAddress.setText(unilist.get(position).getHobby());
 
     }
 

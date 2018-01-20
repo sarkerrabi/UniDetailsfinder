@@ -5,12 +5,14 @@ package com.rupaiedevteam.unidetailsfinder;
  */
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class University {
 
-    private String name;
-    private String hobby;
+    private List<University_> university = null;
+    private Integer success;
+    private String message;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -22,29 +24,39 @@ public class University {
 
     /**
      *
-     * @param name
-     * @param hobby
+     * @param message
+     * @param university
+     * @param success
      */
-    public University(String name, String hobby) {
+    public University(List<University_> university, Integer success, String message) {
         super();
-        this.name = name;
-        this.hobby = hobby;
+        this.university = university;
+        this.success = success;
+        this.message = message;
     }
 
-    public String getName() {
-        return name;
+    public List<University_> getUniversity() {
+        return university;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUniversity(List<University_> university) {
+        this.university = university;
     }
 
-    public String getHobby() {
-        return hobby;
+    public Integer getSuccess() {
+        return success;
     }
 
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
+    public void setSuccess(Integer success) {
+        this.success = success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public Map<String, Object> getAdditionalProperties() {

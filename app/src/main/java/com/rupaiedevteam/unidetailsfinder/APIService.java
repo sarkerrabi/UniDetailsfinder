@@ -1,7 +1,5 @@
 package com.rupaiedevteam.unidetailsfinder;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 
@@ -11,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface APIService {
 
-    @GET("json_bangla")
-    Call<List<University>> getUserData();
+    @GET("displayAll.php")
+    Call<University> getUserData();
 }

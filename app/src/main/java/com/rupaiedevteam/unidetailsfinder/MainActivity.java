@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
     private void getUserList() {
         try {
             APIService apiService = ApiClient.getRetrofit().create(APIService.class);
-            Call<List<University>> call = apiService.getUserData();
-
-            call.enqueue(new Callback<List<University>>() {
+            Call<University> call = apiService.getUserData();
+            call.enqueue(new Callback<University>() {
                 @Override
-                public void onResponse(Call<List<University>> call, Response<List<University>> response) {
+                public void onResponse(Call<University> call, Response<University> response) {
 //                    Log.d("onResponse",response.message());
-                    List<University> universityList= response.body();
+                    University university = response.body();
+                    List<University_> universityList = university.getUniversity();
 
                     linearLayoutManager = new LinearLayoutManager(MainActivity.this);
                     RecyclerView recyclerView = (RecyclerView)findViewById(R.id.unilistView);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<List<University>> call, Throwable t) {
+                public void onFailure(Call<University> call, Throwable t) {
 
                 }
             });

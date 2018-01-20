@@ -8,9 +8,10 @@
         android:id="@+id/uniname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="University Name"
-        android:gravity="center"
         android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="University Name"
+        android:textAlignment="textStart"
         android:textSize="36sp" />
 
     <TextView

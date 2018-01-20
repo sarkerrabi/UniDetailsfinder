@@ -13,9 +13,9 @@ import java.util.List;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerVHforRows> {
 
-    List<University>  unilist;
+    List<University_>  unilist;
 
-    public RecycleViewAdapter(List<University> unilist) {
+    public RecycleViewAdapter(List<University_> unilist) {
         this.unilist = unilist;
     }
 
@@ -33,7 +33,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerVHforRows> 
     @Override
     public void onBindViewHolder(RecyclerVHforRows holder, int position) {
         holder.uniName.setText(unilist.get(position).getName());
-        holder.uniAddress.setText(unilist.get(position).getHobby());
+        holder.uniAddress.setText(unilist.get(position).getAddress());
 
     }
 
